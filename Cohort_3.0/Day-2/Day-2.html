@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Day2 we learn about SEO</h1>
+
+
+    <!--  Less-Known but Powerful HTML Tags -->
+
+    <!-- details/summary — native accordion, no JavaScript needed -->
+<details>
+  <summary>Click to expand this section</summary>
+  <p>This content is hidden by default and revealed on click.
+  Google indexes both open and closed content.</p>
+</details>
+
+<!-- dialog — native modal dialog -->
+<dialog id="my-modal">
+  <h2>Are you sure?</h2>
+  <p>This action cannot be undone.</p>
+  <button onclick="document.getElementById('my-modal').close()">Cancel</button>
+  <button>Confirm</button>
+</dialog>
+<button onclick="document.getElementById('my-modal').showModal()">Open modal</button>
+
+<!-- progress — native progress bar -->
+<label for="upload">Upload progress:</label>
+<progress id="upload" value="65" max="100">65%</progress>
+
+<!-- meter — a measurement within a known range -->
+<label for="disk">Disk usage:</label>
+<meter id="disk" value="6" min="0" max="10" low="3" high="8" optimum="2">6GB</meter>
+
+<!-- datalist — searchable dropdown suggestions -->
+<input list="cities" name="city" placeholder="Type a city...">
+<datalist id="cities">
+  <option value="Mumbai">
+  <option value="Delhi">
+  <option value="Bangalore">
+  <option value="Chennai">
+  <option value="Hyderabad">
+</datalist>
+
+<!-- output — result of a calculation -->
+<form oninput="result.value = parseInt(a.value) + parseInt(b.value)">
+  <input type="number" id="a" value="10"> +
+  <input type="number" id="b" value="20"> =
+  <output name="result">30</output>
+</form>
+
+<!-- template — inert HTML fragment, used by JavaScript -->
+<template id="card-template">
+  <div class="card">
+    <h3 class="card-title"></h3>
+    <p class="card-body"></p>
+  </div>
+</template>
+
+<!-- ruby — East Asian text annotation (pronunciation guides) -->
+<ruby>
+  漢 <rt>かん</rt>
+  字 <rt>じ</rt>
+</ruby>
+
+<!-- bdi — isolates text direction (for user-generated content mixing RTL/LTR) -->
+<p>User <bdi>مرحبا</bdi> posted 15 times.</p>
+
+<!-- wbr — word break opportunity (for long URLs or compound words) -->
+<p>This is a very long URL: https://example.com/very<wbr>/long<wbr>/path<wbr>/here</p>
+
+
+<!-- Accessibility in HTML : ARIA -->
+
+<!-- Roles — override the implicit semantic -->
+<div role="alert">Your session will expire in 5 minutes.</div>
+<div role="status">Form saved successfully.</div>  <!-- polite version -->
+
+<!-- Labels — name elements for screen readers -->
+<button aria-label="Close dialog">X</button>  <!-- "X" alone is meaningless -->
+<nav aria-label="Primary navigation">...</nav>
+<nav aria-label="Footer navigation">...</nav>  <!-- distinguish multiple navs -->
+
+<!-- Descriptions — additional context -->
+<input type="password" aria-describedby="pwd-rules">
+<p id="pwd-rules">Must be 8+ characters with a number and symbol.</p>
+
+<!-- States -->
+<button aria-expanded="false" aria-controls="menu">Menu</button>
+<ul id="menu" hidden>...</ul>
+
+<!-- Live regions — announce dynamic changes -->
+<div aria-live="polite" aria-atomic="true">
+  <!-- Content injected here gets announced by screen readers -->
+</div>
+
+<!-- Hidden from screen readers (decorative) -->
+<svg aria-hidden="true">...</svg>
+<span aria-hidden="true">→</span>  <!-- decorative arrow -->
+
+
+<!-- HTML Performance Techniques -->
+ <!-- Preload critical resources -->
+<link rel="preload" href="/fonts/main.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/hero.jpg" as="image">
+<link rel="preload" href="/critical.css" as="style">
+
+<!-- Preconnect to external domains (warm up the connection) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://api.example.com">
+
+<!-- DNS prefetch (lighter than preconnect) -->
+<link rel="dns-prefetch" href="https://analytics.example.com">
+
+<!-- Prefetch next page (user will likely navigate here) -->
+<link rel="prefetch" href="/next-page.html">
+
+<!-- Script loading strategies -->
+<script src="app.js" defer></script>      <!-- Download async, execute after HTML parsed -->
+<script src="analytics.js" async></script> <!-- Download and execute async, order not guaranteed -->
+<script type="module" src="app.js"></script> <!-- Automatically deferred, ES modules -->
+
+<!-- Inline critical CSS (fastest possible render) -->
+<style>
+  /* Only above-the-fold styles here */
+  body { margin: 0; font-family: sans-serif; }
+  header { background: #fff; height: 60px; }
+</style>
+<!-- Then load the rest asynchronously -->
+<link rel="stylesheet" href="/styles.css" media="print" onload="this.media='all'">
+
+
+
+<!-- The <link> Tag Beyond Stylesheets -->
+ <!-- Favicon variations -->
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<!-- Alternate versions -->
+<link rel="alternate" hreflang="hi" href="https://example.com/hi/page">
+<link rel="alternate" hreflang="en" href="https://example.com/en/page">
+<link rel="alternate" hreflang="x-default" href="https://example.com/page">
+
+<!-- RSS/Atom feed -->
+<link rel="alternate" type="application/rss+xml" title="My Blog Feed" href="/feed.xml">
+
+<!-- Manifest (for PWA) -->
+<link rel="manifest" href="/manifest.json">
+
+
+<!-- The HTML Attributes Every Developer Needs -->
+ <!-- id — unique identifier, used by CSS, JS, anchor links -->
+<section id="contact-section">
+
+<!-- class — for CSS and JS selection, multiple allowed -->
+<div class="card featured large">
+
+<!-- style — inline CSS (use sparingly) -->
+<p style="color: red; font-weight: bold;">
+
+<!-- data-* — custom data attributes for JS -->
+<button data-product-id="42" data-category="electronics">Add to Cart</button>
+<!-- Access in JS: button.dataset.productId → "42" -->
+
+<!-- tabindex — keyboard navigation order -->
+<div tabindex="0">Focusable div</div>  <!-- 0 = natural order -->
+<div tabindex="-1">Programmatically focusable only</div>
+<!-- Avoid positive tabindex values — breaks natural flow -->
+
+<!-- contenteditable — makes any element editable -->
+<div contenteditable="true">Users can edit this text</div>
+
+<!-- hidden — hides element (like display:none, but semantic) -->
+<div hidden>This content is hidden</div>
+
+<!-- draggable — enables HTML drag and drop -->
+<div draggable="true">Drag me</div>
+
+<!-- spellcheck -->
+<textarea spellcheck="true"></textarea>
+
+<!-- translate — whether to translate this text -->
+<code translate="no">console.log("Hello")</code>
+
+<!-- lang — override document language for specific elements -->
+<p lang="fr">Bonjour le monde</p>
+
+<!-- dir — text direction -->
+<p dir="rtl">مرحبا بالعالم</p>
+
+
+
+<!-- Video and Audio -->
+ <!-- Video with multiple formats + subtitles -->
+<video
+  width="1280"
+  height="720"
+  controls
+  muted
+  autoplay
+  loop
+  poster="/thumbnail.jpg"
+  preload="metadata"
+>
+  <source src="video.webm" type="video/webm">
+  <source src="video.mp4" type="video/mp4">
+
+  <!-- Subtitles / closed captions -->
+  <track kind="subtitles" src="subtitles-en.vtt" srclang="en" label="English" default>
+  <track kind="subtitles" src="subtitles-hi.vtt" srclang="hi" label="Hindi">
+
+  <!-- Fallback for browsers that don't support video -->
+  <p>Your browser doesn't support video. <a href="video.mp4">Download it</a>.</p>
+</video>
+
+<!-- Audio -->
+<audio controls preload="metadata">
+  <source src="podcast.ogg" type="audio/ogg">
+  <source src="podcast.mp3" type="audio/mpeg">
+</audio>
+
+
+
+</body>
+</html>
