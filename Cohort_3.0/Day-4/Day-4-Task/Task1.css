@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+
+.nav img{
+    width: 35%;
+}
+
+.nav{
+    /* background-color: antiquewhite; */
+    position: absolute;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#menu span{
+    font-size: 45px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.page{
+    display: flex;
+}
+
+#page1{
+    width: 65vw;
+    height: 100vh;
+    background-color: #FBC50A;
+}
+
+#page2{
+    width: 35vw;
+    height: 100vh;
+    background-color: #FAE7B3;
+}
+
+#page1-content{
+    width: 60%;
+    height: 40%;
+    /* background-color: #FAE7B3; */
+    margin-top: 22%;
+    margin-left: 10%;
+}
+
+#page1-content h5{
+    font-size: 1.5rem;
+}
+
+#page1-content h1{
+    font-size: 7.2rem;
+    font-weight: 800;
+}
+
+#page1-content p{
+    font-size: 1.2rem;
+    letter-spacing: .5px;
+    line-height: 1.5;
+}
+
+
+#bottom{
+    padding-top: 2rem;
+    display: flex;
+    gap: 15px;
+}
+
+#bottom h4{
+    font-size: 22px;
+}
+
+#line{
+    margin-top: 8px;
+    width: 2.5rem;
+    height: 3px;
+    background-color: #000;
+}
+
+#pika {
+    position: absolute;
+    top: 10%;
+    right: 24%;
+    
+}
+
+#pika img{
+    width: 150%;
+}
+
+#bottomlogo{
+    position: absolute;
+    bottom: -1.5%;
+}
+
+#bottomlogo{
+    opacity: .2;
+}
