@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(34, 34, 34);
+}
+
+#box{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    margin: 20px 40px;
+    padding: 40px 0px 100px 20px ;    /* top  right bottom left*/
+}  
+
+#inner{
+    width: 100px;
+    height: 100px;
+    background-color: skyblue;
+}
+
+button{
+    margin: 50px;
+    padding: 10px 20px;
+    font-size: 25px;
+    background-color: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+button:hover{
+    background-color: rgb(255, 247, 247);
+    color: #0a0a0a;
+    border-color: #1a1a1a;
+    transition: all ease .5s;
+}
+
+button:active{
+    background-color: rgb(167, 92, 92);
+    color: #0a0a0a;
+    border-color: #1a1a1a;
+    transition: all ease .5s;
+}
+
+
+/* position property */
+
+#container{
+    width: 40%;
+    height: 40%;
+    border: 2px solid #fff;
+    margin: 10%;
+    position: relative;   /* its help to control your child*/
+}
+
+#box1{
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    position: absolute;  /*its can move any where on screen when give property absolute */
+    left: 40%;
+    top: 30%;
+    color: #0a0a0a;
+
+}
+#box2{
+    width: 100px;
+    height: 100px;
+    background-color: #ff49f6;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#box3{
+    width: 100px;
+    height: 100px;
+    background-color: #f72c2c;
+    position: absolute;
+    left: 70%;
+    bottom: 0;
+}
+
+#center-box{
+    width: 200px;
+    height: 200px;
+    background-color: cornsilk;
+    color: #0a0a0a;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);   /*its help to keep our center-box in center of our screen*/
+}
