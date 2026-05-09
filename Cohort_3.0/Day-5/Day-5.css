@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+
+#box{
+    width: 100vw;
+    height: 100vh;
+    background-color: red;
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: .5rem;
+    
+}
+
+.box1{
+    width: 200px;
+    height: 200px;
+    background-color: cornsilk;
+    flex-shrink: 0;
+    
+}
+.box2{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(228, 206, 121);
+    flex-shrink: 0;
+
+}
+
+.box3{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(68, 216, 226);
+    flex-shrink: 0;
+
+}
