@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+
+
+.container {
+  display:grid;
+  gap: 10px;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  /* grid-template-columns: 1fr 2fr 3fr; */
+  grid-template-columns: repeat(3 , 1fr);
+  grid-template-rows: 80px 80px;
+
+}
+
+.box1{
+    height: 50px;
+    border: 1px solid ;
+}
