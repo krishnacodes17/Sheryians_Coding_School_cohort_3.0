@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: 1fr 2fr 1fr ;
+    grid-template-rows: 200px  (minmax(50px 100px) 20px);
+}
+
+.box{
+    border: 1px solid #fff;
+    background-color: rgb(226, 134, 149);
+}
