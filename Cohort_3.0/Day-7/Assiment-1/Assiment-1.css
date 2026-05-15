@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+}
+
+
+main{
+    width: 100%;
+    height: 100%;
+    border: 1px solid ;
+    display: grid;
+    gap: 5px;
+
+    grid-template-columns: repeat(4 5fr) ;
+    grid-template-rows: 27% 26% 8% 17% 20%;
+    grid-template-areas: 
+    "left-top top-center-1 top-center-2 right-top"
+    "left-top center center right-top"
+    "left-bottom center center right-top"
+    "left-bottom center  center right-bottom"
+    "left-bottom bottom-center-1 bottom-center-2 right-bottom "
+    ;
+
+}
+
+
+.left-top{
+    background-color: royalblue;
+    grid-area: left-top;
+}
+.left-bottom{
+    background-color: rgb(107, 67, 16);
+    grid-area: left-bottom;
+}
+
+.top-center-1{
+    background-color: palegoldenrod ;
+    grid-area: top-center-1 ;
+}
+
+.top-center-2{
+    background-color: rgb(93, 58, 175) ;
+    grid-area: top-center-2;
+}
+
+.center{
+    background-color:rgb(162, 162, 209) ;
+    grid-area: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+.bottom-center-1{
+    background-color: firebrick ;
+    grid-area: bottom-center-1;
+}
+
+.bottom-center-2{
+    background-color: salmon;
+    grid-area: bottom-center-2;
+}
+
+.right-top{
+    background-color: rgb(129, 201, 57);
+    grid-area: right-top;
+}
+
+.right-bottom{
+    background-color: rgb(230, 213, 184);
+    grid-area: right-bottom;
+}
+
+.center img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    /* background-color: red; */
+    /* object-position: top; */
+    margin-bottom: 20px;
+    z-index: 8;
+}

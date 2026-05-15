@@ -11,15 +11,23 @@ html , body{
 }
 
 main{
-    width: 100%;
-    height: 100%;
     display: grid;
-    /* grid-template-columns: repeat(3, 1fr); */
-    grid-template-columns: 1fr 2fr 1fr ;
-    grid-template-rows: 200px  (minmax(50px 100px) 20px);
+    height: 100%;
+    width: 100%;
 }
 
-.box{
-    border: 1px solid #fff;
-    background-color: rgb(226, 134, 149);
+header{
+    background-color: royalblue;
+}
+
+aside{
+    background-color: palegoldenrod;
+}
+
+section{
+    background-color: palevioletred;
+}
+
+footer{
+    background-color: yellow;
 }
