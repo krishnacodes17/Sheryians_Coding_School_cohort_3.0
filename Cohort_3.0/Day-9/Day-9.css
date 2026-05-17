@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(212, 198, 180);
+}
+
+
+h1{
+    background-color: red;
+    margin-top: 10px;
+}
+
+
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: lightskyblue
+    ;
+    margin: 25px;
+}
+
+.min-w-680{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(240, 71, 212)
+    ;
+    margin: 25px;
+}
+
+@media (max-width:680px) {
+    h1{
+        background-color: #000;
+        color: #fff;
+    }
+
+    .box{
+        background-color: red;
+        border-radius: 50%;
+    }
+}
+
+@media (min-width:680px) {
+    .min-w-680{
+        background-color: rgb(179, 255, 0);
+        border-radius: 50%;
+    }
+}
+
+.anime{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+
+    margin: 10px;
+    animation: animation 2s  ease-in-out .3s infinite alternate;
+    /* animation-play-state: paused;  */
+}
+
+.anime:hover{
+     animation-play-state: paused;
+}
+
+
+
+@keyframes animation {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(200%);
+        border-radius: 50%;
+        background-color: bisque;
+
+    }
+}
