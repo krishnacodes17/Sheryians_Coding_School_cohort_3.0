@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+
+.containe{
+    width: 100%;
+    height: 100%;
+    background-color: 1e1e2e;
+    padding: 0 4%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    /* background-color: red; */
+    padding: 20px 20px;
+    justify-content: space-between;
+    margin-top: 10px;
+    height: 6%;
+    border-bottom: 1.5px solid #ecded5;
+
+}
+
+.nav-left{
+    display: flex;
+    gap: 15px;
+}
+
+.nav-left button{
+    border: none ;
+    padding: 4px 8px;
+    border-radius: 20px;
+    background-color: #ecded5 ;
+    font-weight: 500;
+}
+
+.nav-Right{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    /* background-color: red; */
+}
+
+
+.nav-Right a{
+    transition: all ease .4s;
+}
+
+/* .nav-Right a::after{
+    content: "";
+    width: 10%;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+} */
+
+.nav-Right a:hover{
+    border-bottom: 2px solid ; 
+}
+
+.nav-Right button{
+    border: 1px solid;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-weight: 500;
+    width: 21%;
+    margin-left: 20px;
+}
+
+.nav-Right button:hover{
+    background-color: #000;
+    color: #fff;
+    border: none;
+}
+
+
+
+
+/* page-1 */
+
+.page1{
+    width: 100%;
+}
+
+.page1 h1{
+    font-size: 8rem;
+    width: 80%;
+    /* background-color: red; */
+    line-height: 1;
+    margin-top: 10%;
+}
+
+.page1 p{
+    width: 35%;
+    /* background-color: aquamarine; */
+    font-size: 1.7rem;
+}
+
+.page1  button{
+    padding: 8px 14px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.marque{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    
+}
+
+.marque img{
+    transition: all ease .5s;
+    animation-name: maque;
+}
+
+@keyframes maque {
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+
+    }
+}
