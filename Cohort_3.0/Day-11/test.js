@@ -14,3 +14,12 @@ let b = 4
 console.log(a && b);   // false   AND: both must be true
 console.log(a || b);   // true    OR: at least one must be true
 console.log(!a);       // false   NOT: flips the value
+
+
+let count = 0 
+while(count < 5){
+    console.log("count value : ", count)  
+    count ++
+}
+
+
