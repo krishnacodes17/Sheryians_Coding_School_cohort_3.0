@@ -17,14 +17,14 @@ let song2 = {
 
 //  ? to solve this problem contructor comes in pictures
 
-// function CreateBook (){
-//     this.bookName = "harry poter",
-//     this.authoreName = "jk Rowling",
-//     this.pages = 560
-// }
+function CreateBook (){
+    this.bookName = "harry poter",
+    this.authoreName = "jk Rowling",
+    this.pages = 560
+}
 
-// let book1 = new CreateBook()
-// console.log(book1)    // yeha pe seme book hi dikha harry poter wala object but hamko dusara book create kana hai too kya kae
+let book1 = new CreateBook()
+console.log(book1)    // yeha pe seme book hi dikha harry poter wala object but hamko dusara book create kana hai too kya kae
 
 
 
@@ -126,7 +126,6 @@ class User {
         console.log(`welcome User ${this.fistName}`)
     }
 }
-
 
 class Admin extends User {      // ? yeha per admin user ki saai popert ko aapne anader le aha hai (extend kar raha hai )
     constructor(fname,lname,contect,admin){    // ? ye hamara contuctor hai jab ham new admin banayege tabb ham value bhejege likhe admin kaa fname , last name , contect etc

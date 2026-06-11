@@ -16,77 +16,77 @@
 
 //  * creating pomises 
 
-// let p1 = new Promise(function(resolve,reject){
-//     let val = false
+let p1 = new Promise(function(resolve,reject){
+    let val = false
 
-//     if(val){
-//         console.log("promise reslove")
-//         resolve()
-//     }
-//     else{
-//         console.log("pomise reject")
-//         reject()
-//     }
-// })
+    if(val){
+        console.log("promise reslove")
+        resolve()
+    }
+    else{
+        console.log("pomise reject")
+        reject()
+    }
+})
 
 
 //*  booking food than make payment 
 
 
-// function FoderFood(){
-//     let order = new Promise(function(resolve , reject){
-//         console.log("order is comming ")
+function FoderFood(){
+    let order = new Promise(function(resolve , reject){
+        console.log("order is comming ")
 
-//         let orderStatus = true
-
-
-//         setTimeout(()=>{
-//            if(orderStatus){
-//             console.log("Delevery wale bhaiya aaye ")
-//             resolve()
-//            }
-//            else{
-//             console.log("Order failed ❌")
-//             reject()
-//            }
-//         },3000)
-//     })
-
-//     order.then(function(){
-//         let payment = false
-//         console.log("Now make a payement")
-
-//         let pay = new Promise((res,rej)=>{
-//             setTimeout(()=>{
-//                 if(payment){
-//                 console.log("Payment done ")
-//                 res()
-//             }
-//             else{
-//                 console.log("payment failed ")
-//                 rej()
-//             }
-//             },3000)
-//         })
-
-//         pay.then(()=>{
-//             console.log("payent hoo gaya ghar me leke jaao ")
-//         })
-
-//         .catch(()=>{
-//             console.log("arre yaa payent kyu nahi huaa ")
-//         })
-//     })
-
-//     .then(()=>{
-//         console.log("abb aaram se khao payment hoo gaya ")
-//     })
+        let orderStatus = true
 
 
-//     .catch(function(){
-//         console.log("complain karo ")
-//     })
-// }
+        setTimeout(()=>{
+           if(orderStatus){
+            console.log("Delevery wale bhaiya aaye ")
+            resolve()
+           }
+           else{
+            console.log("Order failed ❌")
+            reject()
+           }
+        },3000)
+    })
+
+    order.then(function(){
+        let payment = false
+        console.log("Now make a payement")
+
+        let pay = new Promise((res,rej)=>{
+            setTimeout(()=>{
+                if(payment){
+                console.log("Payment done ")
+                res()
+            }
+            else{
+                console.log("payment failed ")
+                rej()
+            }
+            },3000)
+        })
+
+        pay.then(()=>{
+            console.log("payent hoo gaya ghar me leke jaao ")
+        })
+
+        .catch(()=>{
+            console.log("arre yaa payent kyu nahi huaa ")
+        })
+    })
+
+    .then(()=>{
+        console.log("abb aaram se khao payment hoo gaya ")
+    })
+
+
+    .catch(function(){
+        console.log("complain karo ")
+    })
+}
 
 
 
@@ -116,45 +116,44 @@
 
 
 //  *   its length method 
-// let fetchData  =  fetch('https://fakestoreapi.com/products')
+let fetchData  =  fetch('https://fakestoreapi.com/products')
 
-// .then((res)=>{
-//     return res.json()
-// })
+.then((res)=>{
+    return res.json()
+})
 
-// .then((data)=>{
-//     console.log(data)
-// })
+.then((data)=>{
+    console.log(data)
+})
 
-// .catch((error)=>{
-//     console.log(console.error())
-// })
+.catch((error)=>{
+    console.log(console.error())
+})
+
+*  morden way 
+async function  fetchData (){
+    let raw = await fetch('https://fakestoreapi.com/products')
+
+    let json = await raw.json()
+    console.log(json)
+}
+
+fetchData()
 
 
-// *  morden way 
-// async function  fetchData (){
-//     let raw = await fetch('https://fakestoreapi.com/products')
+ * industries way 
 
-//     let json = await raw.json()
-//     console.log(json)
-// }
+(async ()=>{
+    try {
+        const response = await fetch('https://fakestoreapi.com/products')
 
-// fetchData()
+        let json =await  response.json()
+        console.log(json)
 
-
-//  * industries way 
-
-// (async ()=>{
-//     try {
-//         const response = await fetch('https://fakestoreapi.com/products')
-
-//         let json =await  response.json()
-//         console.log(json)
-
-//     } catch (error) {
-//         console.log(error)
-//     }
-// }) ()
+    } catch (error) {
+        console.log(error)
+    }
+}) ()
 
 
 

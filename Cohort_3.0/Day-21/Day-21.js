@@ -8,37 +8,37 @@
 
 
 // * eg 1 
-// let a = 10
-// let b = 20 
-// let c = a+b
+let a = 10
+let b = 20 
+let c = a+b
 
-// function multiplay (a,b){
-//     console.log(a*b)
-//     return a*b
-// }
+function multiplay (a,b){
+    console.log(a*b)
+    return a*b
+}
 
-// multiplay(a,b)
+multiplay(a,b)
 
-// console.log(c)
+console.log(c)
 
 
 
 //  * Asynchronous
 
-// console.log("start")
+console.log("start")
 
-// setTimeout(()=>{
-//     console.log("center")    // its print after 4 second 
-// },4000)    
+setTimeout(()=>{
+    console.log("center")    // its print after 4 second 
+},4000)    
 
-// console.log("end") 
+console.log("end") 
 
 
 
 //  * setTImeOut  (kuch samaye ke baad chalana )
-// setTimeout(()=>{
-//     console.log("hellow ji ")
-// },3000)
+setTimeout(()=>{
+    console.log("hellow ji ")
+},3000)
 
 
 

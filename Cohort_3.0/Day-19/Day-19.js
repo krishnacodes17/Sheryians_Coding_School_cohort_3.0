@@ -16,24 +16,24 @@
 
 
 
-//  let obj = {
-//      name: "kishna",
-//      age : 20,
-//      greet:()=>{
-//         console.log(this)    // its reffer windows because of its lexical context of arrow function arow function not have any lexical context so its reffers to window 
-//         console.log(this.name)   // nothing print here 
-//      },
+ let obj = {
+     name: "kishna",
+     age : 20,
+     greet:()=>{
+        console.log(this)    // its reffer windows because of its lexical context of arrow function arow function not have any lexical context so its reffers to window 
+        console.log(this.name)   // nothing print here 
+     },
 
-//      greet2:function(){
-//         console.log(this )   // its reffer to object (name , age)
-//         console.log(this.name)   // kishna is output 
-//         this.age = 40    // here age its updated with 40
-//      }
-// }
+     greet2:function(){
+        console.log(this )   // its reffer to object (name , age)
+        console.log(this.name)   // kishna is output 
+        this.age = 40    // here age its updated with 40
+     }
+}
 
-// obj.greet()
-// obj.greet2()
-// console.log(obj)
+obj.greet()
+obj.greet2()
+console.log(obj)
 
 
 
@@ -128,27 +128,27 @@
 
 
 
-// let obj4  = {
-//     name:"kishna",
-//     age:24,
-//     getCompany:function(){
-//         const ComapnyName={
-//             name:"shery",
-//             isGood:true,
-//             greet:()=>{
-//                 console.log(this.name)    // krishna is ouput because its arrow function which have no its own lexical scope
-//             },
+let obj4  = {
+    name:"kishna",
+    age:24,
+    getCompany:function(){
+        const ComapnyName={
+            name:"shery",
+            isGood:true,
+            greet:()=>{
+                console.log(this.name)    // krishna is ouput because its arrow function which have no its own lexical scope
+            },
 
-//             greet2:function(){
-//                 console.log(this.name)   // shery is output because of function keyword 
-//             }
-//         }
-//         ComapnyName.greet()
-//         ComapnyName.greet2()
-//     }
-// }
+            greet2:function(){
+                console.log(this.name)   // shery is output because of function keyword 
+            }
+        }
+        ComapnyName.greet()
+        ComapnyName.greet2()
+    }
+}
 
-// obj4.getCompany()
+obj4.getCompany()
 
 
 
@@ -207,37 +207,34 @@ let student2 ={
 
 
 // ?  Prototypes 
+let arr = [5,7,8,5,4,6]
+
+arr.push(56)   // here we not create push method but we can use it how 
+console.log(arr)  
+console.log(arr.__proto__) 
+console.log(arr.__proto__.__proto__) 
 
 
-// let arr = [5,7,8,5,4,6]
-
-// arr.push(56)   // here we not create push method but we can use it how 
-// console.log(arr)  
-// console.log(arr.__proto__) 
-// console.log(arr.__proto__.__proto__) 
-
-
-
-// let company = {
-//     name:"shery",
-//     foundYear:2025,
-//     greet:function (){
-//         console.log("hellow ,",this.name)
-//     }
-// }
+let company = {
+    name:"shery",
+    foundYear:2025,
+    greet:function (){
+        console.log("hellow ,",this.name)
+    }
+}
 
 
-// let user={
-//     name:"harish",
-//     age:25
-// }
+let user={
+    name:"harish",
+    age:25
+}
 
-// // mai cahta hu ki objProto kaa greet Method by default mai 
+// mai cahta hu ki objProto kaa greet Method by default mai 
 
-// user.__proto__ = company
-// console.log(user.__proto__)   // { name: 'shery', foundYear: 2025, greet: [Function: greet] }
-// user.greet()     // hellow , harish   yeha greet method user me nahi thaa fi rbhi use hoo gaya 
-// console.log(user.foundYear)   // 2025  yeha pe yea bhi use ka paa aha hu jo jo company e hau=i sab use kar paa raha hu 
+user.__proto__ = company
+console.log(user.__proto__)   // { name: 'shery', foundYear: 2025, greet: [Function: greet] }
+user.greet()     // hellow , harish   yeha greet method user me nahi thaa fi rbhi use hoo gaya 
+console.log(user.foundYear)   // 2025  yeha pe yea bhi use ka paa aha hu jo jo company e hau=i sab use kar paa raha hu 
 
 
 
