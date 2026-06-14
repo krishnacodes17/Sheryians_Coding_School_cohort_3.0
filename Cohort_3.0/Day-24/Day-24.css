@@ -56,3 +56,8 @@ button:hover{
   background-color: #fff;
   transition: ease .2s;
 }
+
+
+.bgChangeBulb{
+    background-color: #fff;
+}

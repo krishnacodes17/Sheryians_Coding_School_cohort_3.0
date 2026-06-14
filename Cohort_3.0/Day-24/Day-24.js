@@ -39,20 +39,35 @@
 let circle = document.querySelector(".cicle");
 let button = document.querySelector("button");
 
-circle.addEventListener("click", () => {
-  console.log("circke clicked");
-});
+// circle.addEventListener("click", () => {
+//   console.log("circke clicked");
+// });
 
-let flag = true;
+// let flag = true;
 
-button.addEventListener("click", () => {
-  if (flag) {
-    button.innerText = "OFF";
-    circle.style.backgroundColor = "white";
-    flag = false;
-  } else {
-    button.innerText = "ON";
-    circle.style.backgroundColor = "";
-    flag = true;
-  }
-});
+// button.addEventListener("click", () => {
+//   if (flag) {
+//     button.innerText = "OFF";
+//     circle.style.backgroundColor = "white";
+//     flag = false;
+//   } else {
+//     button.innerText = "ON";
+//     circle.style.backgroundColor = "";
+//     flag = true;
+//   }
+// });
+
+
+
+
+//  ? Second Method
+button.addEventListener("click",()=>{
+    
+    if(circle.classList.toggle("bgChangeBulb")){
+        button.innerText = "OFF"
+    }
+    else{
+        button.innerText = "ON"       
+    }
+
+})
