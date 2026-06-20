@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+
+
+main{
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+}
+
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 1px solid #86838328;
+    background-color: whitesmoke;
+
+}
+
+nav button {
+    font-size: 20px;
+    padding: 7px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+ .poduct{
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    margin-top: 10px;
+    margin: 2%;
+    margin-left: 3.5%;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    background-color: whitesmoke;
+
+ }
+
+ .Product-card{
+    width: 18%;
+    height: 40%;
+    border-radius: 10px;
+    background-color: #fff;
+ }
+
+ .Product-card:hover{
+    box-shadow: 4px 4px 25px rgb(97, 97, 97);
+    transition: all ease .3s;
+ }
+
+ .img-div{
+    width: 100%;
+    height: 65%;
+    overflow: hidden;
+    border-radius: 10px;
+
+ }
+
+ .img-div img{
+    width: 100%;
+    object-fit: cover;
+ }
+
+ .product-details{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 0 10px;
+    padding-top: 2%;
+    margin-top: 5px;
+    border-top:  1px solid rgb(223, 211, 211);
+ }
+
+ .cardBtn{
+    margin-top: 5px;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    height: 35px;
+ }
+
+  .cardBtn button{
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: black;
+    color: whitesmoke;
+  }
+
+    .cardBtn button:hover{
+        background-color: whitesmoke;
+        color: black;
+        border: 1px solid;
+        transition: ease .3s;
+        cursor: pointer;
+    }

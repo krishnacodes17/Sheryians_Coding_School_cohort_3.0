@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+    background-color: beige;
+}
+
+
+main{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows:  1fr 1fr 1fr 1fr ;
+    grid-template-areas: 
+    "top-left  top-1 top-2 top-right" 
+    "top-left  center  center top-right" 
+    "center-1  center center bottom-right" 
+    "bottom bottom  bottom-center  bottom-right "   
+    ;
+    gap: 15px;
+    background-color: rgb(0, 0, 0);
+
+    
+}
+
+
+.top-left{
+    background-color: aliceblue;
+    background-color: rgb(0, 0, 0);
+
+    grid-area: top-left;
+    border-radius: 15px ;
+    overflow: hidden;
+}
+
+.top-1{
+    background-color: aqua;
+    background-color: rgb(0, 0, 0);
+
+    grid-area: top-1;
+    border-radius: 15px ;
+    overflow: hidden;
+}
+
+.top-2{
+    background-color: beige;
+    background-color: rgb(0, 0, 0);
+
+    grid-area: top-2;
+    border-radius: 15px ;
+    overflow: hidden;
+
+}
+
+.top-right{
+    background-color: wheat;
+    background-color: rgb(0, 0, 0);
+
+    grid-area: top-right;
+    border-radius: 15px ;
+    overflow: hidden;
+}
+
+.center-1{
+    background-color: violet;
+    background-color: rgb(0, 0, 0);
+
+    grid-area: center-1;
+    border-radius: 15px ;
+    overflow: hidden;
+
+}
+
+.center{
+    background-color: turquoise;
+    background-color: rgb(0, 0, 0);
+
+    grid-area: center;
+    border-radius: 15px ;
+    overflow: hidden;
+}
+
+.bottom{
+    background-color: thistle;
+    background-color: rgb(0, 0, 0);
+
+    grid-area: bottom;
+    border-radius: 15px ;
+    overflow: hidden;
+}
+
+.bottom-center{
+    background-color: rgb(0, 0, 0);
+    background-color: steelblue;
+    grid-area: bottom-center;
+    border-radius: 15px ;
+    overflow: hidden;
+}
+
+.bottom-right{
+    background-color: rgb(0, 0, 0);
+    grid-area: bottom-right;
+    border-radius: 15px ;
+    overflow: hidden;
+}
+
+
+.top-left-img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 15px ;
+    overflow: hidden;
+}
+
+img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
