@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+  href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+  rel="stylesheet"
+/>
+    <link rel="stylesheet" href="Task-manager-Poject.css">
+    <title>Task-Manager</title>
+</head>
+<body>
+    
+
+<div class="wrapper">
+
+    <main>
+        <div class="m-left">
+            <div class="m-left-logo">
+                <img src="./images/logoo.png" alt="">
+                <h3>TaskZone</h3>
+            </div>
+
+            <div class="search">
+                <i class="ri-search-2-line"></i>
+                <input placeholder="Search for..." type="text">
+            </div>
+
+            <div class="m-left-project">
+                <h3>Project</h3>
+                
+
+            </div>
+
+
+            <div class="m-left-task">
+                <h3>Tasks</h3>
+            </div>
+
+        </div>
+
+        <div class="m-right">
+            <div class="m-right-heading">
+                <h3 id="Today-date">Today : <span></span></h3>
+                <button id="createTaskbtn">Create Task</button>
+            </div>
+
+            <div class="m-right-image">
+                <img src="./images/though.jpeg" alt="">
+            </div>
+
+            <div class="seperate-line"></div>
+
+            <div class="task-details">
+                <div class="details">
+                    <div>
+                    <p>Total Task</p>
+                    <h3 id="TotalTaskData">0</h3>
+                    </div>
+                    <i class="ri-task-line"></i>
+                </div>
+
+                <div class="details">
+                    <div>
+                    <p>Completed</p>
+                    <h3 id="TotalcompletedTaskData">0</h3>
+                    </div>
+                    <i class="ri-shield-check-line"></i>
+                </div>
+
+               
+            </div>
+
+            <div class="current-task">
+                <h2>My-Task</h2>
+                <div class="task-card" id="task_card">
+                    
+
+                    </div>
+                </div>
+            </div>
+
+        
+            <div class="inputField">
+                <form action="">
+                    <input placeholder="Enter Title" type="text" name="" id="titleValue">
+                <input placeholder="Enter Task name" type="text" id="taskValue">
+                <div id="inputBtnDiv">
+                    <button type="submit" id="inputBtnAdd">Add Task</button>
+                    <button type="button" id="inputBtnCancel">cancel</button>
+                </div>
+                </form>
+            </div>
+        </div>
+
+
+
+    </main>
+
+
+
+
+</div>
+
+
+
+
+    <script src="Task-manager-Poject.js"></script>
+</body>
+</html>

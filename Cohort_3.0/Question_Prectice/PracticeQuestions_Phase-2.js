@@ -340,21 +340,162 @@
 
 
 //  * Create debounce function logic.
-function debouncing (fn , delay){
-    let timer 
+// function debouncing (fn , delay){
+//     let timer 
     
-    return function (){
-        clearTimeout(timer)
-        timer = setTimeout(()=>{
-            fn()
-        },delay)
-    }
-}
+//     return function (){
+//         clearTimeout(timer)
+//         timer = setTimeout(()=>{
+//             fn()
+//         },delay)
+//     }
+// }
 
-function greet() {
-    console.log("Hello");
-}
+// function greet() {
+//     console.log("Hello");
+// }
 
-const debouncedGreet = debouncing(greet, 1000);
-debouncedGreet()
-debouncedGreet()
+// const debouncedGreet = debouncing(greet, 1000);
+// debouncedGreet()
+// debouncedGreet()
+
+
+
+
+//   * Create throttle function logic.
+
+// function throttle(fn, delay) {
+//     let canRun = true;
+
+//     return function () {
+//         if (!canRun) return;
+
+//         fn();
+
+//         canRun = false;
+
+//         setTimeout(() => {
+//             canRun = true;
+//         }, delay);
+//     };
+// }
+
+// function greet() {
+//     console.log("Hello from greet");
+// }
+
+// const throttled = throttle(greet, 2000);
+
+// throttled();
+// throttled();
+// throttled();
+
+
+
+
+//  *  Write a function that executes only once.
+
+// (function greet (){
+//     console.log("Hellow ji ")
+// })()
+
+
+
+
+//  * Create custom implementation of map.
+
+// function myMap (arr, callback){
+//     let result = []
+
+//     for(let i = 0 ; i < arr.length ; i++){
+//         // result.push(arr[i])
+//         result.push(callback(arr[i]))
+//     }
+
+//     return result
+// }
+
+
+// console.log(myMap([2,3,4] , function(num){
+//     return num * 2
+// }))
+
+
+
+//  * Create custom implementation of filter
+
+// function myFliter(arr , callback){
+//     let  result = []
+
+//     for(let i= 0 ; i < arr.length ; i ++){
+//         if(callback(arr[i])){
+//             result.push(arr[i])
+//         }
+//     }
+//     return result
+// }
+
+// console.log(myFliter([1,2,3,4,5,6],function (num){
+//     return num % 2 === 0 
+    
+// }))
+
+
+
+//  * Create custom implementation of reduce
+
+// function myReduce(arr , callback , initialValue){
+//     let accumalator = initialValue
+
+//      for (let i = 0; i < arr.length; i++){
+//         accumalator = callback(accumalator, arr[i])
+//      }
+//      return accumalator
+// }
+
+// console.log(myReduce([1,2,3,45] , function(acc , curr){
+//     return acc +  curr
+// }, 0 ))
+
+
+
+//  * Create custom forEach
+
+// function myForEach (arr , callback){
+//     for (let i = 0; i < arr.length; i++) {
+//         callback(arr[i]);
+//     }
+// }
+
+// console.log(myForEach([1,2,3] , function(num){
+//     console.log(num * 2 )
+// }))
+
+
+//  * second method 
+
+// Array.prototype.myForEach = function (callback){
+//     for(let i = 0 ; i < this.length ; i++){
+//         callback(this[i])  // ? this array ko reffer kar raha hai 
+//     }
+// }
+
+// let array = [1,2,3,4]
+// array.myForEach(function(num){
+//     console.log(num * 2 )
+// })
+
+
+
+// *  Explain output:
+
+// function test() {
+//     return;    //? because cursore yehi se return kar de raha hai next line excute nahi hoo aha hai fir
+//     console.log("Hello");
+// }
+// console.log(test());
+
+
+
+// * Create an array of 5 fruits.
+let arr
