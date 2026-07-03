@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="FinPulse.css" />
+    <title>FinPulse</title>
+  </head>
+  <body>
+    <div class="Wrapper"> 
+      <main>
+
+
+
+<!-- * add transection card -->
+        <div class="AddTransection">
+          <div class="modal">
+    <div class="modal-content">
+
+        <div class="modal-header">
+            <h2>Add Transaction</h2>
+            <i id="cancelbtn" class="fa-solid fa-xmark close"></i>
+        </div>
+
+        <form id="transactionForm">
+
+            <div class="form-group">
+                <label>Type</label>
+
+                <select id="expenceType">
+                    <option value="Expense">Expense</option>
+                    <option value="Income">Income</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Description</label>
+
+                <input
+                    type="text"
+                    id="description"
+                    placeholder="e.g. Amazon, Salary, Coffee">
+            </div>
+
+            <div class="row">
+
+                <div class="form-group">
+                    <label>Amount</label>
+
+                    <input
+                        type="number"
+                        id="amount">
+                </div>
+
+                <div class="form-group">
+                    <label>Date</label>
+
+                    <input
+                        type="date"
+                        id="date">
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label>Category</label>
+
+                <select id="category">
+                
+
+                    <!-- <option value="">Select Category</option> -->
+
+                    <option value="food&drink">Food & Dining</option>
+
+                    <option value="shopping">Shopping</option>
+
+                    <option value="Recharge">Recharge & Bills</option>
+
+                    <option value="petrol_&_Auto">Petrol & Auto</option>
+
+                    <option value="Utilities">Utilities</option>
+
+                    <option value="Salary">Salary</option>
+
+                    <option value="Entertainment">Entertainment</option>
+
+                    <option value="Other">Other</option>
+
+                </select>
+            </div>
+
+            <button id="addTransactionBtn" type="submit">
+                Save Transaction
+            </button>
+
+        </form>
+
+    </div>
+</div>
+        </div>
+
+
+
+
+
+        <div class="left">
+          <div class="logo">
+            <i class="ri-stack-fill"></i>
+            <div>
+              <h2>FinPluse</h2>
+              <p>Enterprise Finance</p>
+            </div>
+          </div>
+
+          <div class="leftContent">
+            <div id="dashboardBtn" class="leftContentBox active">
+              <i class="ri-microsoft-fill"></i>
+              <h4>Dashboard</h4>
+            </div>
+
+            <div id="settingsBtn" class="leftContentBox ">
+              <i class="ri-settings-3-fill"></i>
+              <h4>Settings</h4>
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+        <div class="right">
+          <nav>
+            <div>
+              <button id="addTransaction"><i class="fa-solid fa-plus"></i> Add Transaction</button>
+            </div>
+            <div class="navInfo">
+              <h4 id="userNameShow">User-1</h4>
+              <button id="logoutUser">
+                <i  class="fa-solid fa-right-from-bracket"></i> Logout
+              </button>
+            </div>
+          </nav>
+
+          <div class="content "  id="dashboardPage">
+            <div class="page1">
+              <h1>Financial Overview</h1>
+              <p>Real-time tracking application</p>
+            </div>
+
+            <div class="page2">
+              <div class="card-Box">
+                <div class="card">
+                  <i class="fa-sharp fa-solid fa-building-columns"></i>
+                  <div>
+                    <p>Current Balance</p>
+                    <h3 id="Curentbalance">0</h3>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <i class="fa-solid fa-arrow-trend-up"></i>
+                  <div>
+                    <p>Total Income</p>
+                    <h3 id="totalIncome">0</h3>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <i class="fa-sharp fa-solid fa-arrow-trend-down"></i>
+                  <div>
+                    <p>Total Expense </p></p>
+                    <h id="totalExpence">0</h>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <i class="fa-solid fa-piggy-bank"></i>
+                  <div>
+                    <p>Total Transactions</p>
+                    <h3 id="totalTransactions">250</h3>
+                  </div>
+                </div> 
+              </div>
+            </div>
+
+            <div class="page3">
+              <div class="page3-left">
+                <h1>Cash Flow Analysis</h1>
+                <div class="chat">
+                    <canvas id="cashFlowChart"></canvas>
+                </div>
+              </div>
+
+              <div class="page3-right">
+                <h1>Preferences</h1>
+                <div class="linebottom">
+                    <h4>Dark Mode</h4>
+                    <i class="fa-duotone fa-solid fa-toggle-large-off"></i>
+                    <i class="fa-regular fa-toggle-on"></i>
+                </div>
+                <button id="resetAllData">Reset All Data</button>
+              </div>
+
+            </div>
+
+            <div class="page4">
+                <h1>All Transactions</h1>
+                <div class="Transactions_history">
+                    <div class="transactions_Search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search transactions...">
+                    </div>
+                    <div class="all_Type">
+                        <select name="all_Types" id="all_Types">
+                            <option value="all_types">All Types</option>
+                            <option value="income">Income Option</option>
+                            <option value="expense">Expence Option</option>
+                        </select>
+                    </div>
+                </div>
+
+        <div class="table-container">
+
+                <table>
+                    <thead>
+          
+                    </thead>
+
+        <tbody id="transactionTable">
+           
+           </tbody>
+
+                </table>
+
+                </div>
+
+            </div>
+
+          </div>
+
+
+          <div id="settingPage" class="active">
+            <h1>Settings </h1>
+            <p>Manage your account profile and app formatting.</p>
+
+            <div class="settingCard">
+                <h2>Profile Details</h2>
+
+               <div class="settingBox">
+                 <div class="fullNameBox">
+                    <h4>Full Name</h4>
+                    <input id="usernameChange" type="text" placeholder="Enter Username">
+                </div>
+
+                <div class="CurrencyBox">
+                    <h4>Primary Currency</h4>
+                    <select name="curency" id="currency">
+                        <option value="USD (S)">USD (S)</option>
+                        <option value="EUR (€)">EUR (€)</option>
+                        <option value="GBP (E)">GBP (E)</option>
+                        <option value="INR">INR</option>
+                        <option value="JPY">JPY</option>
+                    </select>
+                </div>
+               </div>
+
+               <button class="saveChangesbtn">Save Changes</button>
+
+            </div>
+          </div>
+
+          
+        </div>
+
+
+
+
+      </main>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="FinPulse.js"></script>
+  </body>
+</html>
