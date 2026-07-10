@@ -46,7 +46,7 @@ input type="text" onChange={(handleInputChange} />
 - - issme ham saare input ko name attribute dege jo saae input ko unique banata hai aur uske basis pe hum input ko handle karte hai
 
 
-<!-- ipotant Point -->
+<!-- impotant Point -->
 <note> yeha koi bhi changeEvent tigger hoo raha hai too hamara components rerender hoo raha hai baar baar jo ki performance ko effect kar raha hai. iss problem ko solve karne ke liye hum useRef hook ka use karte hai
 
 - - yeha hamne oneway binding kiya hai 

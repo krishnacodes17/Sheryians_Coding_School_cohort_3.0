@@ -2,12 +2,10 @@ import React from 'react'
 import { useState } from 'react'
 
 function Signup({toggle,setUser,user}) {
-
     const [formData,setFormData] = useState({
         name:"",
         email:""
     })
-
 
     let handelForm =(e)=>{
         const {name,value} = e.target
@@ -15,7 +13,6 @@ function Signup({toggle,setUser,user}) {
         // console.log(e.target.name)
     }
     // console.log(formData)
-
 
     let handelSubmit = (e)=>{
         e.preventDefault()
@@ -27,7 +24,6 @@ function Signup({toggle,setUser,user}) {
         })
         // console.log(formData)
     }
-    // console.log(user)
 
   return (
     <div className='bg-pink-300  flex justify-center items-center'>

@@ -1,33 +1,28 @@
 import React, { useRef, useState } from 'react'
 
 function Form() {
-
   const [form , setForm] = useState([])
   console.log(form)
-
   console.log("app re rendering")
-
     let formRef = useRef({})
-
 
   let handelSubmit = (e)=>{
     e.preventDefault()
     const {ProductName,ProductPrice,category,image} = formRef.current;
     let obj = {
+
       // pName : formRef.currentform.ProductName.value,
       // Price: formRef.current.ProductPrice.value,
       // category: formRef.current.category.value,
       // image : formRef.current.image.value
-
+      
       pname: ProductName.value,
       price: ProductPrice.value,
       category: category.value,
       image:image.value
     }
-
     setForm((prev)=> [...prev , obj])
   }
-
 
   return (
     <div className="w-full max-w-md mx-auto bg-white rounded-2xl shadow-xl border border-gray-200 p-8">
