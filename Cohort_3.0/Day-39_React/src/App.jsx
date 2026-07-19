@@ -9,7 +9,6 @@ function App() {
     return JSON.parse(localStorage.getItem("users")) || []
   })
 
-
    const [userUpdate,setUserUpdate] = useState(null)
    console.log(userUpdate)
 
@@ -25,7 +24,7 @@ function App() {
       
       <div className="flex flex-wrap">
         {(toggle) ? (user.map((e)=> <Card key={e.id} e={e} setToggle={setToggle} deleteUser={deleteUser} setUserUpdate={setUserUpdate} />)) : (
-        <div className="flex gap-2 flex-wrap">
+        <div className="flex items-center align-bottom justify-center w-full h-full gap-2 flex-wrap">
           <Form setUser={setUser} users={user} userUpdate={userUpdate} setToggle={setToggle} />
           </div> )}
       </div>
