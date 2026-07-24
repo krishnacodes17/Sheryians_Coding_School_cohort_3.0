@@ -7,7 +7,7 @@ let { cartProduct , setCartProduct,} = useContext(DataContext)
 console.log(cartProduct)
 
   return (
-    <div className="w-[380px] bg-white shadow-xl rounded-xl p-5 border">
+    <div className="w-[380px] m-4 bg-white shadow-xl rounded-xl p-5 border">
       <h2 className="text-2xl font-bold mb-5">
         🛒 Shopping cartProduct
       </h2>

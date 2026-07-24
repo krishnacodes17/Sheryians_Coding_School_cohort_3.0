@@ -29,7 +29,7 @@ let {product, setProduct , cartProduct,} = useContext(DataContext)
       <Navbar setToggle={setToggle} />
 
       {toggle ? (
-        <div className=' w-full flex flex-wrap gap-4 px-4'>
+        <div className=' w-full flex pt-3 flex-wrap justify-center gap-4 px-4'>
          {
           product.map((elem,ind)=>{
             return <ProductCard key={ind} product={elem} />
