@@ -8,11 +8,9 @@ export let UserContextProvider = ({children})=>{
 
     const [users,setUsers] = useState(localStorageGetUser())
     
-    const [currentUser , setCurrentUser] =useState(localStorageGetCurrentUser())
+    const [currentUser , setCurrentUser] =useState([])
 
-    useEffect(()=>{
-        localStorageSetCurrentUser(currentUser)
-    },[currentUser])
+    
 
     useEffect(()=>{
         localStorageSetUser(users)

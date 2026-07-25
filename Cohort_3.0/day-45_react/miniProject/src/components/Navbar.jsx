@@ -14,9 +14,6 @@ export const ROUTES = {
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  console.log(ROUTES);
-console.log(ROUTES.SHOP);
-console.log(ROUTES.SHOP);
 
   return (
     <nav className="sticky top-0 z-50 bg-white shadow-md">
@@ -32,8 +29,9 @@ console.log(ROUTES.SHOP);
           <ul className="hidden md:flex items-center gap-8 font-medium text-gray-700">
             <li>
               <NavLink
+              end
                 to={ROUTES.HOME}
-                className="hover:text-indigo-600 transition duration-300"
+                className={({isActive})=> isActive  ? "font-bold  duration-500 underline text-blue-500" :  "hover:text-indigo-600 transition duration-300" }
               >
                 Home
               </NavLink>
@@ -42,7 +40,8 @@ console.log(ROUTES.SHOP);
             <li>
               <NavLink
                 to={ROUTES.SHOP}
-                className="hover:text-indigo-600 transition duration-300"
+                className={({isActive})=> isActive  ? "font-bold underline duration-300 text-blue-500" :  "hover:text-indigo-600 transition duration-300"}
+
               >
                 Shop
               </NavLink>
@@ -51,7 +50,8 @@ console.log(ROUTES.SHOP);
             <li>
               <NavLink
                 to={ROUTES.ABOUT}
-                className="hover:text-indigo-600 transition duration-300"
+                className={({isActive})=> isActive  ? "font-bold underline text-blue-500" :  "hover:text-indigo-600 transition duration-300"}
+
               >
                 About
               </NavLink>

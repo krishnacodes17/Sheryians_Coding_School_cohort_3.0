@@ -8,6 +8,7 @@ import ProtectedRoutes from "../routers/ProtectedRoutes";
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
 import AuthLayout from "../Layout/AuthLayout";
+import PublicRouter from "./PublicRouter";
 
 function AppRouters() {
   let route = createBrowserRouter([
@@ -19,8 +20,8 @@ function AppRouters() {
           element: <MainLayout />,
           children: [
             {
-                index:true,
-                element:<Home />
+              index: true,
+              element: <Home />,
             },
             {
               path: "shop",
@@ -36,15 +37,21 @@ function AppRouters() {
     },
     {
       path: "/",
-      element: <AuthLayout />,
+      element: <PublicRouter />,
       children: [
         {
-          path: "",
-          element: <Login />,
-        },
-        {
-          path: "signup",
-          element: <Signup />,
+          
+          element: <AuthLayout />,
+          children: [
+            {
+              path: "",
+              element: <Login />,
+            },
+            {
+              path: "signup",
+              element: <Signup />,
+            },
+          ],
         },
       ],
     },

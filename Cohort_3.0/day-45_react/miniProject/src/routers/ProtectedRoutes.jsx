@@ -1,14 +1,13 @@
 import React from 'react'
 import { Navigate, Outlet } from 'react-router'
-import { toast } from 'react-toastify';
-import { localStorageGetCurrentUser } from '../utils/localStorage';
+import { localStorageGetCurrentUser,  } from '../utils/localStorage';
 
 function ProtectedRoutes() {
 
-  let currentUser = localStorageGetCurrentUser()
+  let admin = localStorageGetCurrentUser()
 
-  if(!currentUser.email && currentUser.hasOwnProperty("email") ){
-    toast.error("you are not Login")
+  if(!admin){
+    alert("you are not admin");
     return <Navigate to="/" replace />
   }
 

@@ -9,9 +9,11 @@ export let localStorageGetUser = ()=>{
 }
 
 export let localStorageGetCurrentUser = ()=>{
-    return JSON.parse(localStorage.getItem("currentUser") || "[]")
+    return JSON.parse(localStorage.getItem("currentUser") || "null")
 }
 
 export const localStorageSetCurrentUser = (user)=>{
+    if(user){
     localStorage.setItem("currentUser", JSON.stringify(user))
+    }
 }

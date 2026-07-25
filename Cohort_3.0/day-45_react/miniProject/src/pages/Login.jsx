@@ -1,15 +1,16 @@
 import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { UserContext } from "../context/UserContext";
-import { localStorageGetUser } from "../utils/localStorage";
 import { toast } from "react-toastify";
+import { localStorageGetUser, localStorageSetCurrentUser } from "../utils/localStorage";
 
 const Login = () => {
 
-   let {currentUser,setCurrentUser} = useContext(UserContext)
+  const {currentUser,setCurrentUser}=  useContext(UserContext)
+
    let [error ,setError] = useState({})
    let navigate = useNavigate()
-
+   
    const [formData, setFormData] = useState({
      email: "",
      password: "",
@@ -25,14 +26,9 @@ const Login = () => {
     if(!formData.password.trim()){
       newError.password ="password is required"
     }
-    console.log(newError)
-
     setError(newError)
     return Object.keys(newError).length === 0
    }
-
-   
-
 
   const handleChange = (e) => {
     setFormData((prev) => ({
@@ -47,15 +43,31 @@ const Login = () => {
 
     let user = localStorageGetUser()
 
-    let existUser = user.find((val)=> val.email === formData.email && val.password ===formData.password)
-
-    if(!existUser){
-      toast.error("User not exists")
+    let isUSerExist = user.find((val)=> val.email === formData.email && val.password === formData.password)
+    
+    if(!isUSerExist){
+      toast.error("User not exist pls Login ")
       return
     }
 
-    setCurrentUser(existUser)
-    toast.success("user login successsfully")
+    let arr = [...currentUser , formData]
+    // console.log(arr)
+    setCurrentUser(arr)
+
+  localStorageSetCurrentUser(isUSerExist)
+
+
+
+
+
+
+    // let existUser = users.find((val)=> val.email === formData.email && val.password ===formData.password)
+
+    // if(!existUser){
+    //   toast.error("User not exists")
+    //   return
+    // }
+
 
     navigate("/main")
   };
