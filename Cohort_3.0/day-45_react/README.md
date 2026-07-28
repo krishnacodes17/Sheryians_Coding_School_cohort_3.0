@@ -82,3 +82,28 @@ export default AppRoutes
 
 ## Note
 <Note> when we use react-router in seme case where we create router components where we create our routes  so remember that we use  Link for navigate that link always came inside router components because router components are the only components that can use Link for navigation. if we use Link outside router components it will not work because Link is a part of react-router and it needs to be inside router components to work properly. so always remember that Link should be used inside router components only.
+
+
+
+
+## Interseptor for axios api calls
+- we can use interseptor for axios api calls to handle errors and responses globally in our application. This allows us to manage API responses and errors in a centralized manner, making our code cleaner and easier to maintain.
+
+``` import axios from "axios"
+
+export const axiosInstance = axios.create({
+    baseURL:"https://fakestoreapi.com",
+
+})
+
+axiosInstance.interceptors.response.use(
+    (response)=>{
+        console.log("in interceptors >>", response)
+        // return []
+        return response
+    },
+    (error)=>{
+        console.log(error)
+    }
+)
+ ```

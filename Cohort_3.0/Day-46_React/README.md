@@ -1,12 +1,54 @@
-# React + Vite
+# Memoizaion  ...>> repet naa karna  
+- memoization means saving something which needs continuouly
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- its help to stop unwanted rerendering
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## react.memo() hook
 
-## Expanding the ESLint configuration
+```
+ 
+function App() {
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+  const [count , setCount] = useState(0)
+
+
+console.log("App count " , count)
+
+  return (
+    <div>
+      <h1>Memoization</h1>
+      <button  onClick={()=> setCount(count + 1)} className='border px-4 py-1 m-3 cursor-pointer'>Increse</button>
+      <About />
+      <Contect />
+    </div>
+  )
+}
+
+``` 
+- iss code me about aur contect component  rerender ho rahe hai jab bhi count change ho raha hai but about aur contect kaa use hi nahi ho raha hai too fir rerender karne ki kya jarurat hai isse bacchneke liye ham react.memo() hook ka use karenge
+
+```
+
+React.memo() is a higher order component. It will prevent the component from re-rendering if the props have not changed.
+
+```
+import React from 'react'
+
+let About = ()=>{
+    console.log("About rendering")
+  return (
+    <div>
+      <h1>About</h1>
+    </div>
+  )
+}
+
+export default React.memo(About)    //! here its store refference   remmber here we store this function into variable  not with function keyword
+
+// ! here function is reference data types so when its rerenderits change its valur(refference Value) so react memo() store its value anot update jabtak ussmekoi valueupdatenaa hoo 
+
+```
+
+### Rules of react.memo()
+- its only memoize static ( jo change naa hoo components ke andat ) components
