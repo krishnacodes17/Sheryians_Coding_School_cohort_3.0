@@ -715,3 +715,5 @@ Customer (Browser)         HTTP (Waiter)          Kitchen (Server)
 | **PUT** | Data update karna | Order change karna |
 | **DELETE** | Data delete karna | Order cancel karna |
 | **Status Code** | Result batata hai | Order status (Ready/Pending/Cancelled) |
+
+-DONE-
