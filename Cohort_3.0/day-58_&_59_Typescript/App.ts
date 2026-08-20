@@ -1,4 +1,4 @@
-//!  promitive types (jaha refference pass nahi hotahoo matlb a alag 5 hai b alag 5 hai a koo b se nahi lena dena aur b ko a se )
+//!  primitive types (jaha refference pass nahi hotahoo matlb a alag 5 hai b alag 5 hai a koo b se nahi lena dena aur b ko a se )
 // ?  12  , "krishna "  , true ,   ye sab primitve hote hai
 
 // let a = 5
@@ -176,7 +176,7 @@ interface Admin extends User{
 
 
 function extendsUser (obj : Admin){
-    obj.email    // ? yeha admin user ki valuebhi le raha hai 
+    obj.email    // ? yeha admin user ki value bhi le raha hai 
 }
 function externdUser (obj:User){
     obj.admin   //  ?  yeha adminki valuenahi aa rahi hai kyu ki user medminnahi hau aurnaahi ooextendskar raha hai 

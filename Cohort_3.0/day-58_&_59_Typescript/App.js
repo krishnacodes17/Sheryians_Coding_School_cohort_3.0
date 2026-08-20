@@ -1,5 +1,5 @@
 "use strict";
-//!  promitive types (jaha refference pass nahi hotahoo matlb a alag 5 hai b alag 5 hai a koo b se nahi lena dena aur b ko a se )
+//!  primitive types (jaha refference pass nahi hotahoo matlb a alag 5 hai b alag 5 hai a koo b se nahi lena dena aur b ko a se )
 // ?  12  , "krishna "  , true ,   ye sab primitve hote hai
 Object.defineProperty(exports, "__esModule", { value: true });
 // let a = 5
@@ -67,7 +67,7 @@ let a;
 //  ! type infrance  >> jab  aap ye naa bataye ki varable kaa typekya hoga tooye autometic deside kar dega jab ham first time variable ki value define karege tab hi  eg :  let a = 5    yeha per a kaa type bydefault "number " set hoo gaya kyu kivarable decleare karete waqt hamne usskavalueeknumber diya 
 let infrence = 5; // ? automatic type bydefault number hoo gaya 
 function extendsUser(obj) {
-    obj.email; // ? yeha admin user ki valuebhi le raha hai 
+    obj.email; // ? yeha admin user ki value bhi le raha hai 
 }
 function externdUser(obj) {
     obj.admin; //  ?  yeha adminki valuenahi aa rahi hai kyu ki user medminnahi hau aurnaahi ooextendskar raha hai 
