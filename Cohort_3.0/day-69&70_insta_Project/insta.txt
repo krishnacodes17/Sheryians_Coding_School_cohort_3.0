@@ -1,0 +1,17 @@
+Authentication >> register
+               >> login
+               >> logout
+               >> otp based 
+
+
+Post >> create
+    >> can see 
+    >> like
+    >> save post              
+
+
+user >> username
+        email
+        password
+        bio
+        profile_Pic
