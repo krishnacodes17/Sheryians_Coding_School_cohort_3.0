@@ -51,6 +51,10 @@ const productSchema = new mongoose.Schema({
     type:mongoose.Types.ObjectId,
     ref:"User",
     required:true
+  },
+  published:{
+    type:Boolean,
+    default:false
   }
 
 

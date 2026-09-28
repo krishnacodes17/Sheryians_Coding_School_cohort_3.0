@@ -2,9 +2,10 @@
 
 const express = require("express")
 const multer = require("multer")
-const { createProductController, getAllProduct } = require("../controllers/product.controller")
+const { createProductController, getAllProduct, updateProduct, unlistProduct, listProduct } = require("../controllers/product.controller")
 const createProductValidator = require("../validator/product.validator")
 const authMiddleware = require("../middleware/auth.middleware")
+const unlistProductValidator = require("../validator/unlistProduct.validator")
 const productRoutes = express.Router()
 
 const upload  = multer({storage:multer.memoryStorage(),
@@ -25,7 +26,8 @@ productRoutes.post("/create",upload.array("images",5),createProductValidator,aut
 productRoutes.get("/getallproduct",authMiddleware,getAllProduct)
 
 
-
+productRoutes.patch("/unlist/:id",authMiddleware , unlistProductValidator,unlistProduct)
+productRoutes.patch("/list/:id",authMiddleware , unlistProductValidator,listProduct)
 
 
 
