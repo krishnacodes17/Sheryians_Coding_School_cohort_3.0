@@ -1,5 +1,5 @@
-const ImageKit = require("@imagekit/nodejs").default;
-const { toFile } = require("@imagekit/nodejs");
+const ImageKit = require("@imagekit/nodejs/index.js").default;
+const { toFile } = require("@imagekit/nodejs/index.js");
 
 const client = new ImageKit({
   privateKey: process.env.IMAGEKIT_PRIVATE_KEY, // This is the default and can be omitted
