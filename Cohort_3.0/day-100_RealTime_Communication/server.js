@@ -1,4 +1,4 @@
-import app from "./src/app.js/app.js";
+import app from "./src/app.js";
 import {createServer} from  "node:http"
 import {Server} from "socket.io"
 
