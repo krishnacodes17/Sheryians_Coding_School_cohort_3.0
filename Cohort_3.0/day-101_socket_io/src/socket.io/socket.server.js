@@ -11,8 +11,8 @@ export default function initializeSocket(httpServer) {
         socket.on("disconnect", ()=>{
             console.log("user disconnect ");
         })
-
-
+        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
         socket.on("elon" , (data)=>{
             console.log("pushpa " , data);
 
@@ -24,10 +24,11 @@ export default function initializeSocket(httpServer) {
 
         })
 
-    
+                   
 
 
     })
 
 
 }
+        
